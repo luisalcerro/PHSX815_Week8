@@ -5,7 +5,11 @@
  #include "TError.h"
  #include <iostream>
 
- double RosenBrock(const double *xx )
+
+
+
+///////Function definition///////
+ double Cone(const double *xx )
  {
    const Double_t x = xx[0];
    const Double_t y = xx[1];
@@ -43,7 +47,7 @@
   
     // create function wrapper for minimizer
     // a IMultiGenFunction type
-    ROOT::Math::Functor f(&RosenBrock,2);
+    ROOT::Math::Functor f(&Cone,2);
     double step[2] = {0.01,0.01};
     // starting point
   
